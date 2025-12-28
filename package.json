@@ -1,0 +1,43 @@
+{
+  "name": "syncrepo",
+  "description": "A tool for synchronizing projects with their template repositories",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "bin": {
+    "syncrepo": "bin/run"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "preprepare": "ts-patch install",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "cmdore": "^0.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "ts-patch": "^3.2.1",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4",
+    "typescript-transform-paths": "^3.4.11"
+  },
+  "author": "Mateusz Pietrzak",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzpkdev/syncrepo.git"
+  },
+  "files": [
+    "bin/",
+    "lib/**/*.js",
+    "lib/**/*.d.ts",
+    "lib/**/*.d.ts.map",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "syncrepo"
+  ]
+}
